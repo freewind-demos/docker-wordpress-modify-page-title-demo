@@ -1,21 +1,26 @@
-Docker Wordpress MySql Demo
-===========================
+Docker Wordpress Custom Plugin Hello in Head and Footer Demo
+=============================================================
 
-通过docker-compose将多个docker images（wordpress, mysql, phpMyAdmin) 组合起来，
-搭建一个本地的快速开发wordpress环境。
-
-本地`WordPress-5.3.2`中的文件将被映射到docker container里，我们的修改刷新浏览器后马上可以看到效果。
-
-`docker-entrypoint-initdb.d`下是sql的初始化文件，启动时会自动使用它来初始化数据库
+如何在一个最简单的wordpress plugin中，在`<head>`与footer里输出一些内容。
 
 ```
 npm run up
 ```
 
-当前登录wordpress的用户名和密码是：
+Admin登录地址： <http://localhost:20080/wp-admin>
 
 ```
 freewind
 123456
 ```
+
+## Build Plugin
+
+```
+npm run build-plugin
+```
+
+将生成`dist/plugin.zip`
+
+然后在wordpress后台，将该plugin上传并启用。之后打开页面，会看到在`<head>`中有插入的javascript内容，以及`</body>`前插入的footer内容。
 

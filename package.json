@@ -2,6 +2,7 @@
   "scripts": {
     "up": "docker-compose up -d",
     "postup": "open http://localhost:20080 & open http://localhost:20081",
-    "down": "docker-compose down"
+    "down": "docker-compose down",
+    "build-plugin": "cd ./src && zip -r ../dist/plugin.zip ."
   }
 }
