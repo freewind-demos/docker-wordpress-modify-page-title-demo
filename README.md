@@ -1,7 +1,12 @@
-Docker Wordpress Custom Plugin Hello in Head and Footer Demo
-=============================================================
+Docker Wordpress Modify Page Title Demo
+=======================================
 
-如何在一个最简单的wordpress plugin中，在`<head>`与footer里输出一些内容。
+如何修改wordpress的title
+
+修改的文件： 
+- WordPress-5.3.2/test.php
+- WordPress-5.3.2/wp-includes/functions.php
+
 
 ```
 npm run up
@@ -14,13 +19,4 @@ freewind
 123456
 ```
 
-## Build Plugin
-
-```
-npm run build-plugin
-```
-
-将生成`dist/plugin.zip`
-
-然后在wordpress后台，将该plugin上传并启用。之后打开页面，会看到在`<head>`中有插入的javascript内容，以及`</body>`前插入的footer内容。
 
